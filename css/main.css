@@ -78,6 +78,7 @@ textarea{resize:vertical;}
  url('fonts/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');font-weight:normal;font-style:normal;}
  
 *{ -moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box; }
+li{ list-style-type: none;  }
 body{font-size:0.625em;line-height:1.4;font-family:Arial,Helvetica,sans-serif;  /* 16x.0,625=10px ;1em = 10px*/}
 .wrapper{ width:700px; margin:40px auto 0; position:relative }
 .header{ }
@@ -104,16 +105,21 @@ body{font-size:0.625em;line-height:1.4;font-family:Arial,Helvetica,sans-serif;  
 .txtCenter{text-align:center}
 
 .txt1{ font-family: arial; font-size:1.2em  }
-.txt2{ }
+.txt2{ font-family: arial; font-size:1.2em; color: #7a7a7a }
 
 .title1{ font-family:"brandon_grotesquemedium"; font-size:2.7em }
 .title2{ font-family:"brandon_grotesquemedium"; font-size:1.6em }
-.title3{ }
+.title3{ font-family:"brandon_grotesquemedium"; font-size:2.0em }
 
 .visu1{ background: url(../img/visu_03.jpg) no-repeat 0 0; display:block; width:100%; height: 100% }
 .visu2{ background: url(../img/visu_03.jpg) no-repeat 0 -172px; display:block; width:100%; height: 100% }
 
-
+.list1 li{ background-color: #000 }
+.list1 li img{ float:left }
+.list1 .bloc2{ width: 175px; height: 175px; float:left }
+.bckBlack{ background-color: #000 }
+.list1 .title3{ color:#fff; text-transform:uppercase; text-align: center }
+.list1 .txt2{ padding-left:15px }
 
 /* ==========================================================================
  Helper classes
