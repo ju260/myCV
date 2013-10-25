@@ -6,7 +6,7 @@
         
     </head>
     <body>
-           <header class="controls">
+           <header class="controls" style="position:absolute">
         <h1 class="header"><a href="http://wellcaffeinated.net/PhysicsJS">Physics<span>JS</span></a> <small>by <a href="http://wellcaffeinated.net/" target="_blank">Well Caffeinated</a></small></h1>
         <div class="btn-back">
             <a href="http://wellcaffeinated.net/PhysicsJS">back to site</a>
@@ -24,13 +24,13 @@
         </div>
     </header>
     <div id="display">
-        <canvas id="viewport"></canvas>
+        <canvas id="viewport" style="position: fixed; top:0; z-index: -1 "></canvas>
     </div>
 
 <!-- Scripts -->
 
        <script src="js/libs/require.js"></script>
-        <script src="js/script.js"></script>
+        <script src="js/tests.js"></script>
 
         
     </body>

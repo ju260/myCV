@@ -31,7 +31,7 @@ define([
         var circles = [];
         
         circles.push(
-            Physics.body('circle', {
+            Physics.body('point', {
                 x: 400,
                 y: 100,
                 vx: 0,

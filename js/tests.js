@@ -1,37 +1,22 @@
 /* Author:
  julien le corre
  */
-
+/*
 $(window).load(function() {
-
-$("body").delegate("#menu1", "click", function() {
-	console.log("ze");
-  $.scrollTo( $("#sect2"), 400 );
-  console.log("ze2");
-});
-
-var cv = Backbone.Model.extend({
-   
+*/
+	//
+	// Je créé mon type de modèle
+/*var cv = Backbone.Model.extend({
+    // cette méthode est appelée automatiquement
+    // à chaque fois que j'instancie ce type de modèle
     initialize: function (attrs, options) {
-        
-        //taille ecran
-        tailleEcran = $(window).height();
-		$(".wrapper > section").each(function(i){  
-			if( tailleEcran > parseFloat($(this).find('.contentSection').height()) ) { 
-				$(this).find('.contentSection').height(tailleEcran-70); 
-				//$(this).find('.contentSection').css('padding',0); 
-			}
-			//else { $(this).find('.social').css('top', parseFloat($(this).height()) ); }	
-		});
-		
-		$(".wrapper section").height(tailleEcran);
-	
-	}
-	    
+        console.log('Coucou cv !');
+    }
 });
-
+// Je créé une instance de ce modèle
 var model = new cv();
 
+*/
 
 
 require({
@@ -45,7 +30,15 @@ require({
     'physicsjs',
     './Satnav',
     './demo-mouse-events',
-    './sims/ju-intro'
+    './sims/simple',
+    './sims/newtonian',
+    './sims/newtons-revenge',
+    './sims/impact',
+    './sims/collision',
+    './sims/basket',
+    './sims/cloth',
+    './sims/fruitcake-on-wheels',
+    './sims/tree'
 
 ], function(
     $,
@@ -88,17 +81,14 @@ require({
     // resize events
     $(window).on('resize', function(){
 
-        viewWidth = 500;
-        viewHeight = 500;
+        viewWidth = $win.width();
+        viewHeight = $win.height(); 
         
         renderer.el.width = viewWidth;
         renderer.el.height = viewHeight;
 
         renderer.options.width = viewWidth;
         renderer.options.height = viewHeight;
-        
-        tailleEcran = $(window).height();
-		$(".wrapper section").height(tailleEcran); 
 
     }).trigger('resize');
 
@@ -122,7 +112,7 @@ require({
     }
 
     // play/pause button
-   /* $(document).on('click', '.start-stop', function(e){
+    $(document).on('click', '.start-stop', function(e){
 
         e.preventDefault();
         var paused = currentWorld.isPaused();
@@ -134,9 +124,14 @@ require({
             $(this).text('play');
             currentWorld.pause();
         }
-    });*/
+    });
 
-   
+    $(document).on('click', '#examples .collapse', function(e){
+
+        e.preventDefault();
+        $('#examples ul').slideToggle();
+        $(this).toggleClass('collapsed');
+    });
 
     $(function(){
 
@@ -155,16 +150,51 @@ require({
         // start the ticker
         Physics.util.ticker.start();
 
-		currentWorld = Physics( examples[ 0 ] );
-        initWorld( currentWorld );
-        currentWorld.add( mouseEvents );
-        currentWorld.unpause();
+        // hashchange event handling
+        Satnav({
+            html5: false, // don't use pushState
+            force: false, // force change event on same route
+            poll: 100 // poll hash every 100ms if polyfilled
+        })
+        .navigate({
+            path: 'demo-{idx}',
+            directions: function(params) {
+                var idx = params.idx;
 
+                $('#examples ul a.btn-demo').removeClass('on');
+                $('#examples ul a[href="#demo-'+idx+'"]').addClass('on');
+
+                if ( idx < examples.length ){
+
+                    if (currentWorld){
+                        // delete the old world
+                        currentWorld.pause();
+                        delete currentWorld;
+                    }
+                    
+                    // initialize the world
+                    currentWorld = Physics( examples[ idx ] );
+                    initWorld( currentWorld );
+                    currentWorld.add( mouseEvents );
+                    currentWorld.unpause();
+                }
+            }
+        })
+        .otherwise('demo-0') // will route all unmatched paths to #/
+        .change(function(params, old) {
+            var title = $('#examples ul a[href="#demo-'+params.idx+'"]').text();
+
+            if (window._gaq){
+                _gaq.push(['_trackEvent', 'Demos', 'View', title]);
+            }
+        })
+        .go()
+        ;
     });
     
 });
 
 
 	//end document load
-});
+/*});*/
 

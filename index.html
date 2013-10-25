@@ -21,20 +21,32 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
+
+	<div class="scroll" style="position:fixed; top:0; bottom:0; left:0; right:0" ></div>
         <div class="wrapper">
+        	
         	<header class="header">
-        		<nav class="menu" role="principale">
+        		<nav class="menu" role="navigation">
         			<ul>
-        				<li><a href="">ABOUT</a></li>
+        				<li><a id="menu1" href="#">ABOUT</a></li>
         				<li><a href="">WORK</a></li>
         				<li><a href="">CONTACT</a></li>
         			</ul>
         		</nav>
         	</header>
+        	
         	<section class="section clearfix" id="sect1">
-        		<header><h1 class="visuallyhidden">julien le corre</h1></header>
+        	 <div class="content">
+        	  <div class="wrapper">
+        		<div class="intro">
+        			<header><h1 class="visuallyhidden">julien le corre</h1></header>
+        		</div>
+        		<canvas id="viewport" ></canvas>
+        		</div><!--end wrapper -->
+        	  </div><!--end content -->
         	</section>
         	<section class="section clearfix" id="sect2">
+        	  <div class="content">
         		<div class="wrapper">
         			<div class="logoAbout"><span class="visuallyhidden">à propos</span></div>
         			<div class="line margL2">
@@ -47,12 +59,12 @@
 	        			</div>
         			</div>
         			<div class="line margL1 line2">
-	        			<div class="bloc1"><div class="title1 txtCenter">31<br>year<br>old</div></div>
-	        			<div class="size1of1 floatL"><img src="img/visu1.png"/><span class="visuallyhidden">french flair</span></div>
-	        			<div class="bloc1"><div class="title1 txtCenter">8<br>YEARS<br>EXPERIENCE</div></div>
+	        			<div class="bloc1"><div class=" txtCenter"><font class="lightFont" style="font-size: 55px; line-height: 93px;">31</font><br /><font class="lightMed" style="font-size: 15px; position:relative; top:-26px; text-transform: uppercase">YEARS</font><br><font class="lightMed" style="font-size: 21px; position:relative; top:-31px">OLD</font></div></div>
+	        			<div class="size1of1 floatL txtCenter"><img src="img/visu1.png" alt="" style="margin-top: 20px" /><span class="visuallyhidden">french flair</span></div>
+	        			<div class="bloc1"><div class="title1 txtCenter"><font class="lightFont" style="font-size: 55px; line-height: 93px;">8</font><br><font class="lightMed" style="font-size: 15px; position:relative; top:-35px; text-transform: uppercase">YEARS</font><br><font class="lightMed" style="font-size: 21px; position:relative; top:-44px">EXPERIENCE</font></div></div>
         			</div>
         			<div class="line margL2 line3">
-        				<div class="bloc1">HTML5</div>
+        				<div class="bloc1"><img class="res" src="img/logo-html5.png" alt="logo html5" /><span class="visuallyhidden">HTML5</span></div>
         				<div class="size1of1 floatL"><span class="visu1">&nbsp;</span></div>
         			</div>
         			<div class="line line4">
@@ -102,9 +114,12 @@
         				<a href="" class="word">télécharger mon cv au format word</a>
         			</div>
         		</div><!--end wrapper -->
+        	  </div><!--end content -->
         	</section><!--end section2 -->
         	
         	<section class="section clearfix" id="sect3">
+        	 <div class="content">
+        	  <div class="wrapper">
         		<h2><span class="visuallyhidden">WORK</span></h2>
         		<ul class="list1">
         			<li>
@@ -164,20 +179,30 @@
         				</a>
         			</li>
         		</ul>
+        	  </div><!--end wrapper -->
+        	 </div><!--end content -->
         	</section><!--end section3 -->
         	
         	<section class="section clearfix" id="sect4">
+        	 <div class="content">
+        	  <div class="wrapper">
         		<h2><span class="visuallyhidden">contact</span></h2>
         		<p>I’m always interested by job and carrer’s inquiries. Feel free to drop me a line if you want longuer than information or just to say hello!</p>
         		<a href="mailto:julienlcpro@gmail.com">julienlcpro@gmail.com</a>
+        	  </div><!--end wrapper -->
+        	 </div><!--end content -->
         	</section><!--end section3 -->
         	
         </div><!--end wrapper -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/libs/require.js"></script>
+       
+        <script src="js/script.js"></script>
+
+       <!-- 
+        <script src="js/script.js"></script>-->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

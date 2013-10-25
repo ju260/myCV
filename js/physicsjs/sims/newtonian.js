@@ -56,6 +56,7 @@ define([
 
         world.add( edgeBounce );
         world.add( Physics.behavior('body-impulse-response') );
+        world.add( Physics.behavior('body-collision-detection', { checkAll: true }) );
         world.add( Physics.behavior('newtonian', { strength: 0.6 }) );
     };
 

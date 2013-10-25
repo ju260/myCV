@@ -14,13 +14,19 @@ define([
             ,viewportBounds = Physics.aabb(0, 0, viewWidth, viewHeight)
             ,spacing = 80
             ,rigidConstraints = Physics.behavior('rigid-constraint-manager', {
-                targetLength: 80
+                targetLength: 81
             })
             ,edgeBounce = Physics.behavior('edge-collision-detection', {
                 aabb: viewportBounds,
                 restitution: 0.99,
                 cof: 0.99
             })
+            ,square = [
+                {x: 0, y: 40},
+                {x: 40, y: 40},
+                {x: 40, y: 0},
+                {x: 0, y: 0}
+            ]
             ;
 
         // the "fruitcake"
@@ -112,7 +118,7 @@ define([
 
         // add things to world
         world.add( fruitcake );
-        world.add( rigidConstraints );
+      //  world.add( rigidConstraints );
         world.add( edgeBounce );
         world.add( Physics.behavior('body-impulse-response') );
         world.add( Physics.behavior('newtonian', { strength: 1 }) );
