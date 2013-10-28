@@ -28,9 +28,15 @@
         	<header class="header">
         		<nav class="menu" role="navigation">
         			<ul>
-        				<li><a id="menu1" href="#">ABOUT</a></li>
+        				<li><a id="menu1" href="javascript:void(0)">ABOUT</a></li>
         				<li><a href="">WORK</a></li>
         				<li><a href="">CONTACT</a></li>
+        			</ul>
+        		</nav>
+        		<nav class="navScroll">
+        			<ul>
+        				<li><a class="top" href="javascript:void(0)">top</a></li>
+        				<li><a class="bottom" href="javascript:void(0)">bottom</a></li>
         			</ul>
         		</nav>
         	</header>
@@ -38,10 +44,12 @@
         	<section class="section clearfix" id="sect1">
         	 <div class="content">
         	  <div class="wrapper">
-        		<div class="intro">
-        			<header><h1 class="visuallyhidden">julien le corre</h1></header>
-        		</div>
-        		<canvas id="viewport" ></canvas>
+        	  	<div class="blocIntro">
+	        		<div class="intro">
+	        			<header><h1 class="visuallyhidden">julien le corre</h1></header>
+	        		</div>
+	        		<canvas id="viewport" ></canvas>
+	        	</div>
         		</div><!--end wrapper -->
         	  </div><!--end content -->
         	</section>
@@ -64,7 +72,7 @@
 	        			<div class="bloc1"><div class="title1 txtCenter"><font class="lightFont" style="font-size: 55px; line-height: 93px;">8</font><br><font class="lightMed" style="font-size: 15px; position:relative; top:-35px; text-transform: uppercase">YEARS</font><br><font class="lightMed" style="font-size: 21px; position:relative; top:-44px">EXPERIENCE</font></div></div>
         			</div>
         			<div class="line margL2 line3">
-        				<div class="bloc1"><img class="res" src="img/logo-html5.png" alt="logo html5" /><span class="visuallyhidden">HTML5</span></div>
+        				<div class="bloc1 borRightNone"><img class="res" src="img/logo-html5.png" alt="logo html5" /><span class="visuallyhidden">HTML5</span></div>
         				<div class="size1of1 floatL"><span class="visu1">&nbsp;</span></div>
         			</div>
         			<div class="line line4">
@@ -72,46 +80,50 @@
 	        				<p class="title2">HIGHT LEVELS OF KNOWLEDGE WITH</p>
 	        				<p class="txt1">i'm a passionnate web developer specialized in front end development (xhtml/css and javascript), i respect semantics markups with W3C standarts, cross browsers developments and Unobtrusive Javascript.</p>
 	        			</div>
-	        			<div class="size1of1 floatL"></div>
+	        			<div class="size1of1 floatL borRightNone"></div>
 	        			<div class="size1of1 floatL"><span class="visu2">&nbsp;</span></div>
 	        		</div>	
-        			<div class="bloc1 size1of4">
-        				<h2>javascript</h2>
-        				<ul>
-        					<li>SVG</li>
-        					<li>CANVAS</li>
-        					<li>API google map V3</li>
-        					<li>Javascript Orienté Objet</li>
-        					<li>Raphael.js</li>
-        					<li>Jquery</li>
-        					<li>Hightcharts.js</li>
-        				</ul>
+	        		<div class="line line5">
+	        			<div class="bloc1 size1of4">
+	        				<h2>javascript</h2>
+	        				<ul>
+	        					<li>SVG</li>
+	        					<li>CANVAS</li>
+	        					<li>API google map V3</li>
+	        					<li>Javascript Orienté Objet</li>
+	        					<li>Raphael.js</li>
+	        					<li>Jquery</li>
+	        					<li>Hightcharts.js</li>
+	        				</ul>
+	        			</div>
+	        			<div class="size1of1 floatL txtCenter">
+	        				mobile/tablets
+	        			</div>
+	        			<div class="bloc1 borRightNone">
+	        				<ul>
+	        					<li>CSS2/3</li>
+	        					<li>W3C</li>
+	        				</ul>
+	        			</div>
+	        			<div class="bloc1">
+	        				<ul>
+	        					<li>DOM</li>
+	        					<li>XML</li>
+	        					<li>AJAX</li>
+	        				</ul>
+	        			</div>
         			</div>
-        			<div class="bloc1">
-        				mobile/tablets
-        			</div>
-        			<div class="bloc1">
-        				<ul>
-        					<li>CSS2/3</li>
-        					<li>W3C</li>
-        				</ul>
-        			</div>
-        			<div class="bloc1">
-        				<ul>
-        					<li>DOM</li>
-        					<li>XML</li>
-        					<li>AJAX</li>
-        				</ul>
-        			</div>
-        			<div class="bloc1">
-        				Emailing template
-        			</div>
-        			<div class="bloc1">
-        				<p class="title2">SOFTWARE &amp; APPLICATIONS</p>
-        				<p class="txt1">Aptana and SVN, edge Inspect,  eclipse and CVS, Photoshop Cs5, Dreamweaver, Illustrator cs, Filezilla</p>
-        			</div>
-        			<div class="bloc1">
-        				<a href="" class="word">télécharger mon cv au format word</a>
+        			<div class="line line6">
+	        			<div class="size1of1 floatL txtCenter bloc3">
+	        				Emailing template
+	        			</div>
+	        			<div class="bloc1 borRightNone">
+	        				<p class="title2">SOFTWARE &amp; APPLICATIONS</p>
+	        				<p class="txt1">Aptana and SVN, edge Inspect,  eclipse and CVS, Photoshop Cs5, Dreamweaver, Illustrator cs, Filezilla</p>
+	        			</div>
+	        			<div class="bloc1">
+	        				<a href="" class="word">télécharger mon cv au format word</a>
+	        			</div>
         			</div>
         		</div><!--end wrapper -->
         	  </div><!--end content -->
@@ -125,57 +137,57 @@
         			<li>
         				<a href="http://preferer4g.sfr.fr/" target="_blank">
         					<img src="img/visu-sfr.jpg" alt=""  />
-	        				<div class="bloc2 bckBlack"><h3 class="title3">SFR 4g</h3></div>
-	        				<div class="bloc2"><p class="txt2">Responsive Mobile/Tablets, html5/CSS3, javascript OO</p></div>
+	        				<div class="bloc2 bckBlack"><div class="verticlaAlign"><h3 class="title3">SFR 4g</h3></div></div>
+	        				<div class="bloc2"><div class="verticlaAlign"><p class="txt2">Responsive Mobile/Tablets, html5/CSS3, javascript OO</p></div></div>
 	        			</a>
         			</li>
         			<li>
         				<a href="http://www.nouveaux-billets-euro.eu/" target="_blank">
         					<img src="img/visu-bce.jpg" alt=""  />
-	        				<div class="bloc2 bckBlack"><h3 class="title3">Bank centrale Européenne</h3></div>
-	        				<div class="bloc2"><p class="txt2">Mobile/Tablets, html5 css3, site multilingues (21 langues)</p></div>
+	        				<div class="bloc2 bckBlack"><div class="verticlaAlign"><h3 class="title3">Bank centrale Européenne</h3></div></div>
+	        				<div class="bloc2"><div class="verticlaAlign"><p class="txt2">Mobile/Tablets, html5 css3, site multilingues (21 langues)</p></div></div>
 	        			</a>
         			</li>
         			<li>
         				<a href="http://www.marquesavenue.com/" target="_blank">
         					<img src="img/visu-ma.jpg" alt=""  />
-	        				<div class="bloc2 bckBlack"><h3 class="title3">Marques Avenue</h3></div>
-	        				<div class="bloc2"><p class="txt2">Mobile/Tablets, html5 css3, déclinaison de 7 centres</p></div>
+	        				<div class="bloc2 bckBlack"><div class="verticlaAlign"><h3 class="title3">Marques Avenue</h3></div></div>
+	        				<div class="bloc2"><div class="verticlaAlign"><p class="txt2">Mobile/Tablets, html5 css3, déclinaison de 7 centres</p></div></div>
 	        			</a>
         			</li>
         			<li>
         				<a href="http://www.havasworldwideparis.com/" target="_blank">
         					<img src="img/visu-hwp.jpg" alt=""  />
-	        				<div class="bloc2 bckBlack"><h3 class="title3">HAVAS WORLDWIDE</h3></div>
-	        				<div class="bloc2"><p class="txt2">html5 css3, CSS3 TRANSFORM, parallax</p></div>
+	        				<div class="bloc2 bckBlack"><div class="verticlaAlign"><h3 class="title3">HAVAS WORLDWIDE</h3></div></div>
+	        				<div class="bloc2"><div class="verticlaAlign"><p class="txt2">html5 css3, CSS3 TRANSFORM, parallax</p></div></div>
 	        			</a>
         			</li>
         			<li>
         				<a href="http://hello.orange.com/index.aspx" target="_blank">
         					<img src="img/visu-orange.jpg" alt=""  />
-        					<div class="bloc2 bckBlack"><h3 class="title3">HELLO ORANGE</h3></div>
-        					<div class="bloc2"><p class="txt2">html5 css3, Ajax, CSS3 TRANSFORM</p></div>
+        					<div class="bloc2 bckBlack"><div class="verticlaAlign"><h3 class="title3">HELLO ORANGE</h3></div></div>
+        					<div class="bloc2"><div class="verticlaAlign"><p class="txt2">html5 css3, Ajax, CSS3 TRANSFORM</p></div></div>
         				</a>
         			</li>
         			<li>
         				<a href=" http://www.edfenr.com" target="_blank">
         					<img src="img/visu-edfenr.jpg" alt=""  />
-        					<div class="bloc2 bckBlack"><h3 class="title3">EDF ENR</h3></div>
-        					<div class="bloc2"><p class="txt2">html5 css3, jquery, Hightcharts.js</p></div>
+        					<div class="bloc2 bckBlack"><div class="verticlaAlign"><h3 class="title3">EDF ENR</h3></div></div>
+        					<div class="bloc2"><div class="verticlaAlign"><p class="txt2">html5 css3, jquery, Hightcharts.js</p></div></div>
         				</a>
         			</li>
         			<li>
         				<a href=" http://www.grtgaz.com" target="_blank">
         					<img src="img/visu-grt.jpg" alt=""  />
-        					<div class="bloc2 bckBlack"><h3 class="title3">GRTGAZ</h3></div>
-        					<div class="bloc2"><p class="txt2">Mobile/Tablets, html5 css3, jquery</p></div>
+        					<div class="bloc2 bckBlack"><div class="verticlaAlign"><h3 class="title3">GRTGAZ</h3></div></div>
+        					<div class="bloc2"><div class="verticlaAlign"><p class="txt2">Mobile/Tablets, html5 css3, jquery</p></div></div>
         				</a>
         			</li>
         			<li>
         				<a href=" http://www.nsquare.net" target="_blank">
         					<img src="img/visu-df.jpg" alt=""  />
-        					<div class="bloc2 bckBlack"><h3 class="title3">N-SQUARE</h3></div>
-        					<div class="bloc2"><p class="txt2">Mobile/Tablets, html5 css3, jquery</p></div>
+        					<div class="bloc2 bckBlack"><div class="verticlaAlign"><h3 class="title3">N-SQUARE</h3></div></div>
+        					<div class="bloc2"><div class="verticlaAlign"><p class="txt2">Mobile/Tablets, html5 css3, jquery</p></div></div>
         				</a>
         			</li>
         		</ul>
@@ -198,6 +210,10 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/libs/require.js"></script>
+        <!--<script src="js/physicsjs/physicsjs-full.js"></script>
+        <script src="js/physicsjs/Satnav.js"></script>
+        <script src="js/physicsjs/demo-mouse-events.js"></script>
+        <script src="js/physicsjs/sims/"></script>-->
        
         <script src="js/script.js"></script>
 

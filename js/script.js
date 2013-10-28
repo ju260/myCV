@@ -5,9 +5,7 @@
 $(window).load(function() {
 
 $("body").delegate("#menu1", "click", function() {
-	console.log("ze");
   $.scrollTo( $("#sect2"), 400 );
-  console.log("ze2");
 });
 
 var cv = Backbone.Model.extend({
@@ -24,7 +22,7 @@ var cv = Backbone.Model.extend({
 			//else { $(this).find('.social').css('top', parseFloat($(this).height()) ); }	
 		});
 		
-		$(".wrapper section").height(tailleEcran);
+		$(".wrapper section, .wrapper section#sect1 .wrapper ").height(tailleEcran);
 	
 	}
 	    
@@ -38,24 +36,27 @@ require({
     baseUrl: './js/physicsjs/',
     paths: {
         'physicsjs': 'physicsjs-full',
-         'jquery': 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min'
+         'jquery': 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min'
     }
 },[
      'jquery',
     'physicsjs',
     './Satnav',
     './demo-mouse-events',
-    './sims/ju-intro'
+    './scrollTo',
+    './sims/ju-intro',
+    
 
 ], function(
     $,
     Physics,
     Satnav,
+    scroll,
     examples
 ){
 
     // each argument after demo-mouse-events is a world object for a demo
-    examples = Array.prototype.slice.call( arguments, 4 );
+    examples = Array.prototype.slice.call( arguments, 5 );
 
     var currentWorld;
     var $win = $(window)
@@ -98,7 +99,7 @@ require({
         renderer.options.height = viewHeight;
         
         tailleEcran = $(window).height();
-		$(".wrapper section").height(tailleEcran); 
+		$(".wrapper section, .wrapper section#sect1 .wrapper ").height(tailleEcran);
 
     }).trigger('resize');
 
@@ -144,13 +145,13 @@ require({
         // init examples control box
         var $ex = $('#examples ul').empty();
         // for all worlds in examples, we'll attach them to the ticker (request animation frame)
-        $.each( examples, function( idx, sim ){
+      /*  $.each( examples, function( idx, sim ){
             
             var src = sim.sourceUrl;
 
             // for demo purposes the sim.title properties are set to be the titles of the demos
             $ex.append( '<li><a class="btn-demo" href="#demo-' + idx + '">' + sim.title + '</a>'+ (src? '<a target="_blank" class="btn-src" href="'+ src +'">(code)</a>' : '') +'</li>' )
-        });
+        });*/
 
         // start the ticker
         Physics.util.ticker.start();

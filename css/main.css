@@ -83,14 +83,14 @@ li{ list-style-type: none;  }
 a{ text-decoration: none }
 body{font-size:0.625em;line-height:1.4;font-family:Arial,Helvetica,sans-serif;  /* 16x.0,625=10px ;1em = 10px*/}
 
-.wrapper{ margin:40px auto 0; position:relative }
-.section .wrapper{ width: 700px }
+.wrapper{ margin:0 auto; position:relative }
+.section .wrapper{ width: 700px; margin-top:190px }
 
 .lightFont{ font-family:'fonts/brandon_grotesquelight' }
 .lightMed{ font-family:'brandon_grotesquemedium' }
 
 .content{ overflow:auto; height: 100% }
-.header{ margin:0; width:100%; position:fixed; top:0; background-color: #fff; z-index: 9  }
+.header{ margin:0; width:100%; position:fixed; top:0; z-index: 9; margin:0 auto  }
 .wrapper section { position:relative; width:100%}
 .logo{ float:left; width:276px; height: 207px; background: url(images/logo.png) no-repeat 0 0 }
 .logoAbout{ float:left; width:276px; height: 207px; background: url(../img/visu_About.png) no-repeat 0 0; position:absolute; left:-89px; top:-100px }
@@ -98,21 +98,33 @@ body{font-size:0.625em;line-height:1.4;font-family:Arial,Helvetica,sans-serif;  
 .pjs-meta{ display:none }
 #viewport{ position: absolute; left: 50%; margin-left: -250px; z-index: 1 }
 .intro{ z-index:2; position:absolute; top:60px; left:50%; width:255px; height: 342px; background: url(../img/intro.png) no-repeat 0 0; margin-left: -122px }
-.bloc1{ width:172px; height:172px; border:1px solid #d9d9d9; float:left; overflow:hidden }
+.bloc1{ text-indent:-99999px; width:172px; height:172px; border:1px solid #d9d9d9; float:left; overflow:hidden }
+.bloc3{ border-top: 1px solid #d9d9d9; border-bottom: 1px solid #d9d9d9; height: 172px }
 .line{width:100%; overflow:hidden; position:relative; top:1px}
 .line2{top:0}
 .line3{top:-1px}
 .line4{top:-2px}
+.line5{top: -3px;height: 172px;overflow: visible;}
+.line6{top: -4px;height: 172px;overflow: visible;}
 
-.menu{ padding:30px 0 15px  }
+
+.menu{ display:none; padding:30px 0 15px; background-color: #fff; width:90%; margin:0 auto  }
 .menu li{ display:inline-block; border-right:1px solid #d9d9d9; width:33%; text-align: center }
 .menu li:last-child{ border-right:0 }
 .menu a{ font-size:2em; color:#000; font-family: "brandon_grotesquemedium";   }
 
+.blocIntro{position:absolute; top: 50%; left:50%; height: 342px; margin:-221px 0 0 -120px; width:255px }
+#sect1 .wrapper{ margin-top:0  }
+
+.navScroll{ position:fixed; left:50%; bottom:10%; background: url(../img/nav.png) no-repeat 0 0; width:42px; height: 80px }
+.navScroll a{ width:42px; height:38px; overflow:hidden; position:absolute; display:block; text-indent:-999px }
+.navScroll a.top{ top:0 }
+.navScroll a.bottom{ bottom:0 }
+
 .size1of1{width:170px; height:171px;}
 .size3of1{ width:516px  }
 .size1of4{ height:688px  }
-.size2of1{ width:344px;  }
+.size2of1{ width:343px;  }
 
 .margL1{margin-left:171px}
 .margL2{margin-left:342px}
@@ -120,6 +132,8 @@ body{font-size:0.625em;line-height:1.4;font-family:Arial,Helvetica,sans-serif;  
 .floatL{float:left}
 .floatR{float:right}
 .txtCenter{text-align:center}
+.borRightNone{ border-right:0 none }
+.size1of1.borRightNone{ width: 171px }
 
 .res{ width:100%; height: auto }
 
@@ -135,11 +149,12 @@ body{font-size:0.625em;line-height:1.4;font-family:Arial,Helvetica,sans-serif;  
 
 .list1 li{ background-color: #000 }
 .list1 li img{ float:left }
-.list1 .bloc2{ width: 175px; height: 175px; float:left }
+.list1 .bloc2{ width: 175px; height: 175px; float:left; display:table }
 .bckBlack{ background-color: #000 }
-.list1 .title3{ color:#fff; text-transform:uppercase; text-align: center }
+.list1 .title3{ color:#fff; text-transform:uppercase; text-align: center; padding:0 15px }
 .list1 .txt2{ padding-left:15px }
 
+.verticlaAlign{ display:table-cell; vertical-align:middle }
 /* ==========================================================================
  Helper classes
  ========================================================================== */
