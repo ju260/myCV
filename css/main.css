@@ -98,7 +98,7 @@ body{font-size:0.625em;line-height:1.4;font-family:Arial,Helvetica,sans-serif;  
 .pjs-meta{ display:none }
 #viewport{ position: absolute; left: 50%; margin-left: -250px; z-index: 1 }
 .intro{ z-index:2; position:absolute; top:60px; left:50%; width:255px; height: 342px; background: url(../img/intro.png) no-repeat 0 0; margin-left: -122px }
-.bloc1{ text-indent:-99999px; width:172px; height:172px; border:1px solid #d9d9d9; float:left; overflow:hidden }
+.bloc1{ width:172px; height:172px; border:1px solid #d9d9d9; float:left; overflow:hidden }
 .bloc3{ border-top: 1px solid #d9d9d9; border-bottom: 1px solid #d9d9d9; height: 172px }
 .line{width:100%; overflow:hidden; position:relative; top:1px}
 .line2{top:0}
